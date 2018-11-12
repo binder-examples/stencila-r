@@ -86,6 +86,10 @@ plot(x, y, cex=z*2, col=rainbow(length(z), alpha=0.5)[rank(x+z)], pch=16)</code>
         </caption>
         <alternatives>
           <code specific-use="source" language="r" executable="yes">#: fig.width=7,fig.height=6
+s &lt;- min(1000, n)
+x &lt;- runif(s)
+y &lt;- x + runif(s)
+z &lt;- y + rnorm(s)
 hist(z, breaks=40, col=hsv(0.6, 0.9, 1), xlab=&quot;Value&quot;, main=&quot;&quot;)</code>
           <code specific-use="output" language="json">{}</code>
         </alternatives>

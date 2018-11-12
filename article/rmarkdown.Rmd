@@ -53,5 +53,9 @@ plot(x, y, cex=z*2, col=rainbow(length(z), alpha=0.5)[rank(x+z)], pch=16)
 In RMarkdown, code chunks can have various options. A common use for options is to set the caption and dimensions of figures. Stencila converts code chunks with the `fig.cap` option into JATS `<fig fig-type="repro-fig">` elements with a `<caption>`. This allows the user to edit the figure caption and for automatic figure numbering and referencing (although that is not working 100% right now). Other options are placed in a comment at the top of the cell so that they are preserved (and eventually will be used to apply those options within the R execution context).
 
 ```{r fig.width=7,fig.height=6,fig.cap="Figure title"}
+s <- min(1000, n)
+x <- runif(s)
+y <- x + runif(s)
+z <- y + rnorm(s)
 hist(z, breaks=40, col=hsv(0.6, 0.9, 1), xlab="Value", main="")
 ```
